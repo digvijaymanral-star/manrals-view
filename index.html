@@ -3,144 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Manral's View — experience-first travel beyond conventional tourism.">
-  <title>Manral's View — Experience Travel Differently</title>
+  <meta name="description" content="Manral's View — experience-first travel. Discover Machhor village in Uttarakhand through local life, food, people, nature and stories.">
+  <meta name="theme-color" content="#0f3d2e">
+  <title>Manral's View — Travel Differently. Experience Deeply.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#home">MANRAL'S VIEW</a>
-    <nav>
+  <div class="top-strip">Travel differently. Experience deeply. <span>•</span> Real people. Real stories.</div>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#home" aria-label="Manral's View home">
+      <span class="brand-mark">⌁</span>
+      <span><strong>Manral's View</strong><small>Travel Differently. Experience Deeply.</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
       <a href="#experiences">Experiences</a>
+      <a href="#machhor">Machhor</a>
       <a href="#story">Our Story</a>
-      <a href="#village">Village Experience</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="#contact">Plan an Experience</a>
+    <a class="nav-cta" href="https://wa.me/918587080086?text=Hi%20Manral's%20View,%20I'd%20like%20to%20know%20more%20about%20the%20Machhor%20experience." target="_blank" rel="noopener">Let's Talk ↗</a>
   </header>
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">EXPERIENCE-FIRST TRAVEL</p>
+      <img src="assets/mountains.jpg" alt="Mountain landscape around Machhor, Uttarakhand" class="hero-bg">
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow light">MANRAL'S VIEW</p>
         <h1>Don't just visit a place.<br><em>Live it.</em></h1>
-        <p class="hero-copy">
-          We create experiences that bring you closer to people, food, culture,
-          nature and the everyday life of a place.
-        </p>
+        <p class="hero-copy">Travel beyond sightseeing — meet people, share food, explore nature and experience the everyday life that makes a place special.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#village">Explore our first experience</a>
-          <a class="button secondary" href="#story">Why Manral's View?</a>
+          <a class="button primary" href="#machhor">Explore Machhor ↓</a>
+          <a class="button glass" href="#story">Why we travel this way</a>
+        </div>
+        <div class="hero-note"><span>📍</span> Machhor · near Bhatrojkhan · Almora, Uttarakhand</div>
+      </div>
+      <div class="hero-stamp">Same mountains.<br><strong>Different stories.</strong></div>
+    </section>
+
+    <section class="promise reveal">
+      <div class="promise-intro">
+        <p class="eyebrow">A DIFFERENT VIEW OF TRAVEL</p>
+        <h2>Travel should give you more than photographs.</h2>
+        <p>We believe the best journeys let you slow down, meet people, learn something, eat something local and become part of a place — even if only for a day.</p>
+      </div>
+      <div class="promise-grid">
+        <article><span>🌿</span><h3>Live with locals</h3><p>Be part of the rhythm, not just a visitor.</p></article>
+        <article><span>🥕</span><h3>Farm & cook</h3><p>From the field to the plate, hands-on.</p></article>
+        <article><span>⛰️</span><h3>Nature & adventure</h3><p>Trails, views, weather and open skies.</p></article>
+        <article><span>🤝</span><h3>People & stories</h3><p>Conversations that stay with you.</p></article>
+        <article><span>🏡</span><h3>Simple living</h3><p>A break from the rush of ordinary travel.</p></article>
+      </div>
+    </section>
+
+    <section id="experiences" class="experience-types section-pad">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">WHAT WE CREATE</p><h2>Experiences, not ordinary tours.</h2></div>
+        <p>Manral's View is being built around one simple idea: <strong>travel should be felt, not just photographed.</strong></p>
+      </div>
+      <div class="type-grid">
+        <article class="type-card type-village reveal"><div><span>01</span><h3>Village Life</h3><p>Spend time where everyday life is the experience.</p></div></article>
+        <article class="type-card type-food reveal"><div><span>02</span><h3>Food & Culture</h3><p>Cook, taste, learn and share the stories behind local traditions.</p></div></article>
+        <article class="type-card type-people reveal"><div><span>03</span><h3>People & Stories</h3><p>Meet the people who make a destination more than a pin on a map.</p></div></article>
+      </div>
+    </section>
+
+    <section id="machhor" class="machhor section-pad">
+      <div class="machhor-copy reveal">
+        <p class="eyebrow">OUR FIRST EXPERIENCE · UTTARAKHAND</p>
+        <h2>Machhor<br><em>Village Experience</em></h2>
+        <p class="lead">A chance to slow down, step into local life and experience the real Uttarakhand.</p>
+        <p>Come to <strong>Machhor, near Bhatrojkhan, Almora</strong>, and spend time around a local family, their home, their farm and the landscape around them.</p>
+        <div class="facts">
+          <div><b>01–02</b><span>Days<br>customisable</span></div>
+          <div><b>02–06</b><span>Small-group<br>experience</span></div>
+          <div><b>∞</b><span>Stories<br>to take home</span></div>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary dark" href="https://wa.me/918587080086?text=Hi%20Manral's%20View,%20I'd%20like%20to%20enquire%20about%20the%20Machhor%20Village%20Experience." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+          <a class="button outline" href="#gallery">See the experience ↓</a>
+        </div>
+      </div>
+      <div class="machhor-media reveal">
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="assets/mountains.jpg" playsinline>
+            <source src="assets/machhor-experience.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+          <div class="video-label">A glimpse of Machhor <span>• sound on</span></div>
+        </div>
+        <div class="mini-gallery">
+          <img src="assets/sunset.jpg" alt="Sunset over the mountains near Machhor">
+          <img src="assets/village-life.jpg" alt="Guests sharing time with locals around a fire">
+          <img src="assets/dogs.jpg" alt="Two friendly dogs in the mountains">
         </div>
       </div>
     </section>
 
-    <section class="intro">
-      <p class="eyebrow">A DIFFERENT VIEW OF TRAVEL</p>
-      <h2>Travel should give you more than photographs.</h2>
-      <p>
-        A hotel room and a list of sightseeing spots can show you a destination.
-        We want you to experience it — meet its people, understand its rhythm,
-        taste its food, take part in everyday life and leave with a story.
-      </p>
-    </section>
-
-    <section id="experiences" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">WHAT WE CREATE</p>
-        <h2>Experiences, not ordinary tours.</h2>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <span>01</span>
-          <h3>Village Life</h3>
-          <p>Step into everyday rural life and experience a place as a local family experiences it.</p>
-        </article>
-        <article class="card">
-          <span>02</span>
-          <h3>Food & Culture</h3>
-          <p>Cook, eat, learn and discover the stories behind local food and traditions.</p>
-        </article>
-        <article class="card">
-          <span>03</span>
-          <h3>People & Stories</h3>
-          <p>Meet the people who make a destination more than a point on a map.</p>
-        </article>
+    <section class="village-life">
+      <div class="village-image reveal"><img src="assets/village-life.jpg" alt="People spending time together outside a village home"></div>
+      <div class="village-copy reveal">
+        <p class="eyebrow light">VILLAGE LIFE</p>
+        <h2>Real people.<br><em>Real experiences.</em></h2>
+        <p>Pick your own vegetables. Help with everyday chores. Cook together. Spend time with the family. Meet the animals. Walk the village. Sit down and talk.</p>
+        <p class="small-note">This is not a checklist of attractions. It is time spent living a little differently.</p>
+        <div class="activity-row"><span>🌱 Pick & cook</span><span>🐄 Meet the animals</span><span>🏡 Live the culture</span><span>📷 Make memories</span></div>
       </div>
     </section>
 
-    <section id="village" class="feature">
-      <div class="feature-image">
-        <div class="image-placeholder">YOUR MACHUR PHOTOS WILL GO HERE</div>
+    <section id="gallery" class="gallery section-pad">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">FROM MACHHOR</p><h2>Some moments. Some views. Some stories.</h2></div>
+        <p>These are not stock photographs. They are glimpses of the place and the people behind the experience.</p>
       </div>
-      <div class="feature-copy">
-        <p class="eyebrow">OUR FIRST EXPERIENCE · UTTARAKHAND</p>
-        <h2>A Day in the Village</h2>
-        <p>
-          Come to Machur, near Bhatrorj Khan and Almora, and experience a side of
-          Uttarakhand that isn't found on a standard sightseeing itinerary.
-        </p>
-        <p>
-          Pick vegetables from the farm. Cook a meal. Help with everyday chores.
-          Meet the family. Walk through the village. Slow down and experience
-          life as it is lived here.
-        </p>
-        <p class="quote">“Whenever I go there, I'm not a guest. I live as a member of the family.”</p>
-        <a class="button primary" href="#contact">Ask about this experience</a>
+      <div class="gallery-grid">
+        <button class="photo wide reveal" data-full="assets/mountains.jpg"><img src="assets/mountains.jpg" alt="Wide mountain view"></button>
+        <button class="photo tall reveal" data-full="assets/umbrella.jpg"><img src="assets/umbrella.jpg" alt="Digvijay in Machhor with an umbrella"></button>
+        <button class="photo reveal" data-full="assets/people-trail.jpg"><img src="assets/people-trail.jpg" alt="Friends walking through the hillside"></button>
+        <button class="photo reveal" data-full="assets/adventure.jpg"><img src="assets/adventure.jpg" alt="Exploring the hillside"></button>
+        <button class="photo reveal" data-full="assets/pine-view.jpg"><img src="assets/pine-view.jpg" alt="Pine trees and mountain landscape"></button>
+        <button class="photo wide reveal" data-full="assets/sunset.jpg"><img src="assets/sunset.jpg" alt="Mountain sunset"></button>
+        <button class="photo reveal" data-full="assets/dogs.jpg"><img src="assets/dogs.jpg" alt="Two dogs looking out over the mountains"></button>
+        <button class="photo reveal" data-full="assets/mist.jpg"><img src="assets/mist.jpg" alt="Misty mountain landscape"></button>
       </div>
     </section>
 
-    <section id="story" class="story">
-      <div>
+    <section id="story" class="story section-pad">
+      <div class="story-photo reveal"><img src="assets/umbrella.jpg" alt="Digvijay Manral in Machhor"></div>
+      <div class="story-copy reveal">
         <p class="eyebrow">THE STORY BEHIND MANRAL'S VIEW</p>
-        <h2>Travel changed the way I see the world.</h2>
-      </div>
-      <div>
-        <p>
-          I started travelling when I was 17. Along the way, I discovered that
-          the real value of travel isn't simply reaching another destination.
-          It's the exposure — the people you meet, the conversations you have,
-          the friendships you make and the experiences you carry home.
-        </p>
-        <p>
-          But modern travel can sometimes become shallow: book a hotel, visit
-          the popular sights, take a few photographs and leave without ever
-          understanding how people actually live there.
-        </p>
-        <p>
-          Manral's View is my attempt to offer something different: experiences
-          that let travellers participate in the life of a place rather than
-          simply pass through it.
-        </p>
+        <h2>Hi, I'm Digvijay.</h2>
+        <p class="lead">I started travelling when I was 17, and since then travel has been one of my biggest teachers.</p>
+        <p>It gave me exposure, new perspectives, new people, new friendships and experiences that stayed long after I returned home.</p>
+        <p>But I also noticed how easy it has become to travel without really experiencing a place — book a hotel, see the popular sights, take a few photographs and leave.</p>
+        <p><strong>Manral's View is my way of sharing a different kind of journey:</strong> one where you meet people, participate in everyday life and leave with a story of your own.</p>
+        <div class="signature">— Digvijay Manral</div>
       </div>
     </section>
 
-    <section class="how">
+    <section class="quote-banner reveal">
+      <img src="assets/mountains.jpg" alt="Uttarakhand mountains">
+      <div><p>“Travel is not about how many places you see,<br>but how deeply you experience them.”</p><span>— MANRAL'S VIEW</span></div>
+    </section>
+
+    <section class="how section-pad reveal">
       <p class="eyebrow">HOW IT WORKS</p>
       <h2>Choose an experience. Come curious. Leave with a story.</h2>
       <div class="steps">
-        <div><b>01</b><h3>Choose</h3><p>Find an experience that feels like you.</p></div>
-        <div><b>02</b><h3>Connect</h3><p>Tell us your dates and what you want to experience.</p></div>
-        <div><b>03</b><h3>Experience</h3><p>We take care of the details. You live the experience.</p></div>
+        <div><b>01</b><h3>Choose</h3><p>Tell us what kind of experience you want.</p></div>
+        <div><b>02</b><h3>Connect</h3><p>Share your dates, group size and expectations.</p></div>
+        <div><b>03</b><h3>Experience</h3><p>We help with the details. You live the moment.</p></div>
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <p class="eyebrow">LET'S CREATE YOUR EXPERIENCE</p>
-      <h2>Ready to travel differently?</h2>
-      <p>Tell us what you're looking for and we'll help you find an experience.</p>
-      <div class="contact-actions">
-        <a class="button primary" href="https://wa.me/9185870800086" target="_blank" rel="noopener">WhatsApp us</a>
-        <a class="button secondary" href="mailto:thevijaymanral@gmail.com">Email us</a>
+      <img src="assets/sunset.jpg" alt="Sunset over Uttarakhand mountains" class="contact-bg">
+      <div class="contact-overlay"></div>
+      <div class="contact-inner reveal">
+        <p class="eyebrow light">YOUR NEXT STORY STARTS HERE</p>
+        <h2>Ready to experience Machhor?</h2>
+        <p>Let's plan your village experience.</p>
+        <div class="contact-actions">
+          <a class="button whatsapp" href="https://wa.me/918587080086?text=Hi%20Manral's%20View,%20I'd%20like%20to%20plan%20the%20Machhor%20experience." target="_blank" rel="noopener">WhatsApp 8587080086 ↗</a>
+          <a class="button glass" href="mailto:thevijaymanral@gmail.com">thevijaymanral@gmail.com</a>
+        </div>
+        <a class="instagram" href="https://www.instagram.com/itsbetweenmeandmysoul/?hl=en" target="_blank" rel="noopener">Instagram · @itsbetweenmeandmysoul ↗</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <strong>MANRAL'S VIEW</strong>
-    <span>© 2026 Manral's View · DigvijayManral.com</span>
+    <div class="footer-brand"><strong>Manral's View</strong><span>Travel Differently. Experience Deeply.</span></div>
+    <div class="footer-links"><a href="#top">Home</a><a href="#experiences">Experiences</a><a href="#story">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+    <div class="footer-note">© 2026 Manral's View · DigvijayManral.com</div>
   </footer>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img src="" alt="Expanded gallery image">
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

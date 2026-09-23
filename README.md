@@ -1,15 +1,27 @@
-# Manral's View — website starter
+# Manral's View — website
 
-This is the first free-hosting version of the Manral's View website.
+Experience-first travel website for **Manral's View**.
 
-Files:
-- index.html — website content
-- style.css — design
-- script.js — small interaction
+## GitHub Pages
+1. Upload the contents of this folder to the `main` branch of the `manrals-view` repository.
+2. Keep `CNAME` in the repository root.
+3. In GitHub: **Settings → Pages → Deploy from a branch → main → / (root)**.
+4. Keep the existing custom-domain/DNS settings for `DigvijayManral.com`.
 
-Next:
-1. Upload these files to the GitHub repository.
-2. Enable GitHub Pages from Settings → Pages.
-3. Connect DigvijayManral.com.
-4. Replace the image placeholder with the real Machur photographs.
-5. Add the final Instagram handle and confirm the contact email before launch.
+## Included
+- Responsive homepage
+- Machhor village experience section
+- Real Machhor photographs
+- Machhor video with its original audio track preserved
+- Gallery lightbox
+- Mobile navigation
+- WhatsApp enquiry buttons
+- Instagram link
+- Contact email
+
+## Contact
+Phone / WhatsApp: `8587080086`
+Instagram: `@itsbetweenmeandmysoul`
+Email: `thevijaymanral@gmail.com`
+
+The website uses the spelling **Machhor** and **Bhatrojkhan** throughout.
