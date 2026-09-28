@@ -1,0 +1,7 @@
+Upload these FOUR files to the ROOT of your GitHub repository manrals-view:
+index.html
+hosts.html
+dinesh-kadakoti.jpg
+hari-kadakoti.jpg
+
+Do not upload the ZIP itself or a containing folder. index.html replaces the existing index.html. Do not delete other files. Wait for GitHub Pages to deploy, then open https://digvijaymanral.com/hosts.html .
