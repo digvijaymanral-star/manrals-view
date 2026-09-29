@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Manral's View gallery — Machhor village, people, nature and everyday life in Uttarakhand.">
+<title>Gallery — Manral's View</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.gallery-page{padding:100px 7vw 90px;background:#f7f1e7;min-height:100vh}
+.gallery-hero{max-width:900px;margin:0 auto 55px;text-align:center}
+.gallery-hero h1{font:500 clamp(3.2rem,7vw,6.5rem)/.95 "Playfair Display",serif;margin:0 0 22px;color:#123d30}
+.gallery-hero h1 em{color:#9bcf3c}
+.gallery-hero p:not(.eyebrow){max-width:720px;margin:0 auto;color:#637168;font-size:1.08rem;line-height:1.8}
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:35px auto 55px}
+.filter{border:1px solid #cdd6cb;background:#fff;color:#173f32;border-radius:999px;padding:11px 18px;font:600 .78rem "DM Sans",sans-serif;letter-spacing:.04em;cursor:pointer;transition:.2s}
+.filter:hover,.filter.active{background:#123d30;color:#fff;border-color:#123d30}
+.photo-grid{max-width:1250px;margin:auto;columns:3 300px;column-gap:18px}
+.gallery-card{break-inside:avoid;margin:0 0 18px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(20,50,35,.08);cursor:pointer;border:0;padding:0;text-align:left;width:100%;display:block}
+.gallery-card img{width:100%;display:block;height:auto;transition:transform .5s ease}
+.gallery-card:hover img{transform:scale(1.025)}
+.gallery-caption{padding:16px 18px 19px}
+.gallery-caption span{display:block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#76917f;margin-bottom:6px}
+.gallery-caption strong{display:block;font:600 1.25rem "Playfair Display",serif;color:#163e31;margin-bottom:5px}
+.gallery-caption p{margin:0;color:#6b776f;font-size:.82rem;line-height:1.55}
+.back-home{text-align:center;margin-top:55px}
+.back-home a{color:#123d30;font-weight:700;text-decoration:none}
+.gallery-lightbox{position:fixed;inset:0;background:rgba(3,18,13,.94);z-index:200;display:none;place-items:center;padding:25px}
+.gallery-lightbox.open{display:grid}
+.gallery-lightbox img{max-width:94vw;max-height:88vh;object-fit:contain;border-radius:12px}
+.gallery-close{position:absolute;right:25px;top:15px;border:0;background:none;color:#fff;font-size:2.7rem;cursor:pointer}
+@media(max-width:700px){.gallery-page{padding:70px 5vw}.photo-grid{columns:2 150px;column-gap:10px}.gallery-card{margin-bottom:10px}.gallery-caption{padding:11px 12px 14px}.gallery-caption strong{font-size:1.05rem}.gallery-caption p{font-size:.74rem}.filter{padding:9px 13px;font-size:.68rem}}
+</style>
+</head>
+<body>
+<div class="top-strip">Travel differently. Experience deeply. <span>•</span> Real people. Real stories.</div>
+<header class="nav" id="top">
+<a class="brand" href="index.html#home"><span class="brand-mark">⌁</span><span><strong>Manral's View</strong><small>Travel Differently. Experience Deeply.</small></span></a>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="nav-links">
+<a href="index.html#experiences">Experiences</a><a href="index.html#machhor">Machhor</a><a href="index.html#story">Our Story</a><a href="gallery.html">Gallery</a><a href="index.html#contact">Contact</a>
+</nav>
+<a class="nav-cta" href="https://wa.me/918587080086?text=Hi%20Manral's%20View,%20I'd%20like%20to%20know%20more%20about%20the%20Machhor%20experience." target="_blank" rel="noopener">Let's Talk ↗</a>
+</header>
+
+<main class="gallery-page">
+<section class="gallery-hero">
+<p class="eyebrow">THE MACHHOR GALLERY</p>
+<h1>See the place.<br><em>Meet the people.</em></h1>
+<p>A growing collection of real moments from Machhor — the landscape, village life, guests, hosts and the little details that make the experience what it is.</p>
+</section>
+
+<div class="filters" aria-label="Gallery filters">
+<button class="filter active" data-filter="all">ALL</button>
+<button class="filter" data-filter="Machhor">MACHHOR</button>
+<button class="filter" data-filter="Village Life">VILLAGE LIFE</button>
+<button class="filter" data-filter="People & Stories">PEOPLE & STORIES</button>
+</div>
+
+<div class="photo-grid" id="photoGrid">
+<button class="gallery-card" data-category="Machhor" data-full="assets/mountains.jpg"><img src="assets/mountains.jpg" alt="Mountain landscape around Machhor" loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>Mountain views around Machhor</strong><p>Mountain views around Machhor.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/sunset.jpg"><img src="assets/sunset.jpg" alt="Sunset over the mountains" loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>Evenings in the hills</strong><p>Evenings in the hills.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/pine-view.jpg"><img src="assets/pine-view.jpg" alt="Pine trees and mountain view" loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>Pine, sky and mountain air</strong><p>Pine, sky and mountain air.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/mist.jpg"><img src="assets/mist.jpg" alt="Misty mountain landscape" loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>Clouds rolling through the hills</strong><p>Clouds rolling through the hills.</p></div></button>
+<button class="gallery-card" data-category="Village Life" data-full="assets/village-life.jpg"><img src="assets/village-life.jpg" alt="Guests sharing time with locals" loading="lazy"><div class="gallery-caption"><span>Village Life</span><strong>Time around the village home</strong><p>Time around the village home.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/adventure.jpg"><img src="assets/adventure.jpg" alt="Guests exploring the landscape" loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Out exploring together</strong><p>Out exploring together.</p></div></button>
+<button class="gallery-card" data-category="Village Life" data-full="assets/dogs.jpg"><img src="assets/dogs.jpg" alt="Two dogs in the mountains" loading="lazy"><div class="gallery-caption"><span>Village Life</span><strong>A little village welcome committee</strong><p>A little village welcome committee.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/umbrella.jpg"><img src="assets/umbrella.jpg" alt="A guest experience in Machhor" loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>A personal moment from the journey</strong><p>A personal moment from the journey.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/welcome-tilak.jpg"><img src="assets/welcome-tilak.jpg" alt="A warm welcome — a small ritual that makes a visit feel personal." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>A warm welcome</strong><p>A warm welcome — a small ritual that makes a visit feel personal.</p></div></button>
+<button class="gallery-card" data-category="Village Life" data-full="assets/village-chicken.jpg"><img src="assets/village-chicken.jpg" alt="A familiar face in the village, with the mountains in the background." loading="lazy"><div class="gallery-caption"><span>Village Life</span><strong>A familiar face in the village, with the mountains in the background</strong><p>A familiar face in the village, with the mountains in the background.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/guests-by-stone-house.jpg"><img src="assets/guests-by-stone-house.jpg" alt="Guests walking through an old stone home and the greenery around it." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Guests walking through an old stone home and the greenery around it</strong><p>Guests walking through an old stone home and the greenery around it.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/machhor-trail.jpg"><img src="assets/machhor-trail.jpg" alt="A quiet village trail beside an old stone house." loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>A quiet village trail beside an old stone house</strong><p>A quiet village trail beside an old stone house.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/hari-kadakoti-village.jpg"><img src="assets/hari-kadakoti-village.jpg" alt="Hari Kadakoti surrounded by the landscape she calls home." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Hari Kadakoti surrounded by the landscape she calls home</strong><p>Hari Kadakoti surrounded by the landscape she calls home.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/dinesh-kadakoti.jpg"><img src="assets/dinesh-kadakoti.jpg" alt="Dinesh Kadakoti — one of the hosts behind the Machhor experience." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Dinesh Kadakoti</strong><p>Dinesh Kadakoti — one of the hosts behind the Machhor experience.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/hillside-village.jpg"><img src="assets/hillside-village.jpg" alt="The green hillside landscape surrounding the village." loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>The green hillside landscape surrounding the village</strong><p>The green hillside landscape surrounding the village.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/above-the-clouds.jpg"><img src="assets/above-the-clouds.jpg" alt="A clear Himalayan morning above the clouds." loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>A clear Himalayan morning above the clouds</strong><p>A clear Himalayan morning above the clouds.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/hari-kadakoti-profile-side.jpg"><img src="assets/hari-kadakoti-profile-side.jpg" alt="Hari Kadakoti looking across the mountain landscape." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Hari Kadakoti — a life rooted in the hills</strong><p>Hari Kadakoti against the mountain landscape of Machhor.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/hari-kadakoti-profile-front.jpg"><img src="assets/hari-kadakoti-profile-front.jpg" alt="Hari Kadakoti with the mountains behind her." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Meet Hari</strong><p>One of the people who makes the Machhor experience feel like home.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/dinesh-kadakoti-profile.jpg"><img src="assets/dinesh-kadakoti-profile.jpg" alt="Dinesh Kadakoti seated outside the village home." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Meet Dinesh</strong><p>Chef, host and one of the people behind the experience.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/dinesh-kadakoti-wide.jpg"><img src="assets/dinesh-kadakoti-wide.jpg" alt="Dinesh Kadakoti seated beside the old stone house." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Dinesh at home</strong><p>A quiet moment at the property in Machhor.</p></div></button>
+<button class="gallery-card" data-category="People & Stories" data-full="assets/guests-stone-house-2.jpg"><img src="assets/guests-stone-house-2.jpg" alt="Guests exploring the old stone house and village trail." loading="lazy"><div class="gallery-caption"><span>People & Stories</span><strong>Exploring together</strong><p>Guests discovering the old stone house and the greenery around it.</p></div></button>
+<button class="gallery-card" data-category="Machhor" data-full="assets/stone-house-trail-wide.jpg"><img src="assets/stone-house-trail-wide.jpg" alt="Village trail beside an old stone house in Machhor." loading="lazy"><div class="gallery-caption"><span>Machhor</span><strong>The trail continues</strong><p>A wider look at the old stone house, trees and village path.</p></div></button>
+</div>
+<div class="back-home"><a href="index.html">← Back to Manral's View</a></div>
+</main>
+
+<div class="gallery-lightbox" id="lightbox"><button class="gallery-close" aria-label="Close">×</button><img id="lightboxImg" src="" alt=""></div>
+
+<script>
+const buttons=[...document.querySelectorAll('.filter')];
+const cards=[...document.querySelectorAll('.gallery-card')];
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+ buttons.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+ const f=btn.dataset.filter;
+ cards.forEach(card=>card.style.display=(f==='all'||card.dataset.category===f)?'block':'none');
+}));
+const lb=document.getElementById('lightbox'), lbImg=document.getElementById('lightboxImg');
+cards.forEach(card=>card.addEventListener('click',()=>{lbImg.src=card.dataset.full;lbImg.alt=card.querySelector('img').alt;lb.classList.add('open')}));
+document.querySelector('.gallery-close').onclick=()=>lb.classList.remove('open');
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+const menu=document.querySelector('.menu-toggle'), nav=document.querySelector('.nav-links');
+menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'))});
+</script>
+</body>
+</html>

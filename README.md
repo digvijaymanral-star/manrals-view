@@ -25,3 +25,13 @@ Instagram: `@itsbetweenmeandmysoul`
 Email: `thevijaymanral@gmail.com`
 
 The website uses the spelling **Machhor** and **Bhatrojkhan** throughout.
+
+
+## New gallery update
+A separate `gallery.html` page has been added with category filters:
+- All
+- Machhor
+- Village Life
+- People & Stories
+
+The new photo batch was checked for repeated/near-identical shots. Only one representative image from each repeated sequence was included; duplicate-looking frames were intentionally left out.
