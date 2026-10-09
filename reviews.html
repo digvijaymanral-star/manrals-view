@@ -3,41 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Guest memories from Manral’s View in Machhor, Uttarakhand.">
-<title>Guest Memories | Manral’s View</title>
+<meta name="description" content="Real guest reviews and memories from Manral’s View in Uttarakhand.">
+<title>Guest Reviews | Manral’s View</title>
 <style>
-:root{--forest:#203b30;--cream:#f7f4ec;--sage:#e3e9df}
+:root{--forest:#203b30;--cream:#f7f4ec;--sage:#e3e9df;--ink:#20352d}
 *{box-sizing:border-box}
-html{background:var(--cream);min-height:100%}
+html{background:var(--cream);scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--forest);font-family:Arial,Helvetica,sans-serif}
-header{padding:22px 5%;display:flex;justify-content:center;background:#fffdf8;border-bottom:1px solid #203b3012}
-.brand{font:700 1.45rem Georgia,serif;color:var(--forest);text-decoration:none}
-.intro{text-align:center;padding:34px 16px 30px;background:linear-gradient(135deg,var(--sage),var(--cream))}
-.intro p{font:italic clamp(1.2rem,3vw,1.9rem)/1.35 Georgia,serif;margin:0 auto;max-width:720px}
-main{max-width:1320px;margin:0 auto;padding:28px 22px 54px}
-.guest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.guest-card{position:relative;min-width:0;height:clamp(280px,32vw,430px);overflow:hidden;border-radius:18px;background:#dfe5dc;box-shadow:0 10px 28px #20352d18}
-.guest-card img{display:block;width:100%;height:100%;object-fit:cover}
-.guest-name{position:absolute;left:0;right:0;bottom:0;padding:48px 18px 18px;color:white;font-weight:700;font-size:1.05rem;letter-spacing:.02em;background:linear-gradient(transparent,#101b16e8);text-shadow:0 1px 4px #0008}
-.back{text-align:center;margin:32px 0 0}
-.back a{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--forest);color:white;text-decoration:none;font-weight:700}
-@media(max-width:850px){.guest-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.guest-card{height:clamp(280px,55vw,400px)}}
-@media(max-width:520px){main{padding:20px 14px 36px}.guest-grid{grid-template-columns:1fr;gap:16px}.guest-card{height:105vw;max-height:440px;min-height:300px}}
+header{padding:20px 5%;display:flex;justify-content:center;background:#fffdf8;border-bottom:1px solid #203b3012}
+.brand{font:700 1.4rem Georgia,serif;color:var(--forest);text-decoration:none}
+.intro{text-align:center;padding:30px 16px 24px;background:linear-gradient(135deg,var(--sage),var(--cream))}
+.eyebrow{font-size:.72rem;letter-spacing:.18em;font-weight:700;text-transform:uppercase;margin:0 0 10px;color:#6b7d6d}
+h1{font:500 clamp(2rem,4vw,3.1rem)/1.1 Georgia,serif;margin:0 0 10px}
+.intro p:last-child{margin:0 auto;max-width:650px;line-height:1.6;color:#53665a}
+main{max-width:1380px;margin:0 auto;padding:22px 0 44px}
+.row-label{padding:0 5.5%;margin:10px 0 12px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#728071}
+.marquee{overflow:hidden;padding:0 0 18px;position:relative}
+.track{display:flex;width:max-content;gap:16px;padding:0 18px;animation:scroll-left 54s linear infinite;will-change:transform}
+.track.reverse{animation-name:scroll-right;animation-duration:60s;margin-top:4px}
+.marquee:hover .track,.marquee:focus-within .track{animation-play-state:paused}
+.guest-card{position:relative;display:block;flex:0 0 235px;width:235px;height:255px;padding:0;border:0;border-radius:16px;overflow:hidden;text-align:left;cursor:pointer;background:#dfe5dc;box-shadow:0 8px 22px #20352d17;color:white}
+.guest-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.guest-card:hover img,.guest-card:focus-visible img{transform:scale(1.045)}
+.guest-card:focus-visible{outline:3px solid #b17a45;outline-offset:3px}
+.card-copy{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:7px;padding:38px 15px 15px;background:linear-gradient(transparent,#101b16ee)}
+.card-copy strong{font-size:1rem}
+.highlight{font-size:.82rem;line-height:1.35;color:#fff8e9}
+.read-more{font-size:.72rem;font-weight:700;letter-spacing:.04em;color:#d9e7d6;margin-top:2px}
+@keyframes scroll-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scroll-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.back{text-align:center;margin:14px 0 0}
+.back a{display:inline-block;padding:11px 18px;border-radius:999px;background:var(--forest);color:white;text-decoration:none;font-size:.9rem;font-weight:700}
+dialog{width:min(620px,calc(100% - 28px));max-height:min(82vh,800px);padding:0;border:0;border-radius:20px;background:var(--cream);color:var(--ink);box-shadow:0 24px 90px #0005;overflow:auto}
+dialog::backdrop{background:#102219b8;backdrop-filter:blur(4px)}
+.modal-head{position:relative;padding:25px 26px 20px;background:linear-gradient(135deg,var(--sage),var(--cream));border-bottom:1px solid #203b3015}
+.modal-kicker{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#637a69;font-weight:700}
+.modal-head h2{font:500 clamp(1.55rem,4vw,2.1rem)/1.2 Georgia,serif;margin:9px 40px 0 0}
+.close{position:absolute;right:16px;top:15px;width:38px;height:38px;border:0;border-radius:50%;background:#fffdf8;color:var(--forest);font-size:1.5rem;cursor:pointer}
+.modal-body{padding:24px 26px 28px;font:1rem/1.75 Georgia,serif;white-space:pre-line}
+.modal-name{font:700 .85rem/1.4 Arial,sans-serif;color:#617568;margin-top:18px}
+@media(max-width:600px){main{padding-top:14px}.guest-card{flex-basis:200px;width:200px;height:230px}.track{gap:12px}.row-label{padding:0 18px}.modal-head{padding:22px 20px 18px}.modal-body{padding:20px;font-size:.98rem}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.marquee{overflow-x:auto}.guest-card img{transition:none}}
 </style>
 </head>
 <body>
 <header><a class="brand" href="index.html">Manral’s View</a></header>
-<section class="intro"><p>A few moments, a lot of mountain memories.</p></section>
-<main aria-label="Guest memories from Machhor">
-  <div class="guest-grid">
-    <article class="guest-card"><img src="shubham-dimri.jpg" alt="Shubham Dimri enjoying the mountain view" loading="lazy"><span class="guest-name">Shubham Dimri</span></article>
-    <article class="guest-card"><img src="malvika-thakur.jpg" alt="Malvika Thakur during her visit" loading="lazy"><span class="guest-name">Malvika Thakur</span></article>
-    <article class="guest-card"><img src="monica-malkotia.jpg" alt="Monica Malkotia during her visit" loading="lazy"><span class="guest-name">Monica Malkotia</span></article>
-    <article class="guest-card"><img src="mukund-manral.jpg" alt="Mukund Manral at a waterfall" loading="lazy"><span class="guest-name">Mukund Manral</span></article>
-    <article class="guest-card"><img src="ravi-sharma.jpg" alt="Ravi Sharma" loading="lazy"><span class="guest-name">Ravi Sharma</span></article>
-    <article class="guest-card"><img src="tracy-mozhui.jpg" alt="Tracy Mozhui enjoying the misty hills" loading="lazy"><span class="guest-name">Tracy Mozhui</span></article>
-  </div>
+<section class="intro">
+  <p class="eyebrow">Real moments, real memories</p>
+  <h1>Stories from our guests</h1>
+  <p>Every visit leaves a different memory. Tap a guest’s highlight to read what made their time in Uttarakhand special.</p>
+</section>
+<main aria-label="Guest reviews">
+  <p class="row-label">Mountain memories · Row one</p>
+  <section class="marquee" aria-label="Moving guest photos, first row"><div class="track" id="track1">
+<button class="guest-card" type="button" data-guest="Ravi Sharma" aria-label="Read Ravi Sharma's review">
+      <img src="ravi-sharma.jpg" alt="Ravi Sharma" loading="lazy">
+      <span class="card-copy"><strong>Ravi Sharma</strong><span class="highlight">A different feeling in the mountains</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Monica Malkotia" aria-label="Read Monica Malkotia's review">
+      <img src="monica-malkotia.jpg" alt="Monica Malkotia" loading="lazy">
+      <span class="card-copy"><strong>Monica Malkotia</strong><span class="highlight">Views, nature & warm hospitality</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Malvika Thakur" aria-label="Read Malvika Thakur's review">
+      <img src="malvika-thakur.jpg" alt="Malvika Thakur" loading="lazy">
+      <span class="card-copy"><strong>Malvika Thakur</strong><span class="highlight">A haven in the hills</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Ravi Sharma" aria-label="Read Ravi Sharma's review">
+      <img src="ravi-sharma.jpg" alt="Ravi Sharma" loading="lazy">
+      <span class="card-copy"><strong>Ravi Sharma</strong><span class="highlight">A different feeling in the mountains</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Monica Malkotia" aria-label="Read Monica Malkotia's review">
+      <img src="monica-malkotia.jpg" alt="Monica Malkotia" loading="lazy">
+      <span class="card-copy"><strong>Monica Malkotia</strong><span class="highlight">Views, nature & warm hospitality</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Malvika Thakur" aria-label="Read Malvika Thakur's review">
+      <img src="malvika-thakur.jpg" alt="Malvika Thakur" loading="lazy">
+      <span class="card-copy"><strong>Malvika Thakur</strong><span class="highlight">A haven in the hills</span><span class="read-more">Read review ↗</span></span>
+    </button>
+</div></section>
+  <p class="row-label">Nature, food & hospitality · Row two</p>
+  <section class="marquee" aria-label="Moving guest photos, second row"><div class="track reverse" id="track2">
+<button class="guest-card" type="button" data-guest="Tracy Mozhui" aria-label="Read Tracy Mozhui's review">
+      <img src="tracy-mozhui.jpg" alt="Tracy Mozhui" loading="lazy">
+      <span class="card-copy"><strong>Tracy Mozhui</strong><span class="highlight">A refreshing escape</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Shubham Dimri" aria-label="Read Shubham Dimri's review">
+      <img src="shubham-dimri.jpg" alt="Shubham Dimri" loading="lazy">
+      <span class="card-copy"><strong>Shubham Dimri</strong><span class="highlight">A place to slow down</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Mukund Manral" aria-label="Read Mukund Manral's review">
+      <img src="mukund-manral.jpg" alt="Mukund Manral" loading="lazy">
+      <span class="card-copy"><strong>Mukund Manral</strong><span class="highlight">Good food, beautiful nature & peace</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Tracy Mozhui" aria-label="Read Tracy Mozhui's review">
+      <img src="tracy-mozhui.jpg" alt="Tracy Mozhui" loading="lazy">
+      <span class="card-copy"><strong>Tracy Mozhui</strong><span class="highlight">A refreshing escape</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Shubham Dimri" aria-label="Read Shubham Dimri's review">
+      <img src="shubham-dimri.jpg" alt="Shubham Dimri" loading="lazy">
+      <span class="card-copy"><strong>Shubham Dimri</strong><span class="highlight">A place to slow down</span><span class="read-more">Read review ↗</span></span>
+    </button><button class="guest-card" type="button" data-guest="Mukund Manral" aria-label="Read Mukund Manral's review">
+      <img src="mukund-manral.jpg" alt="Mukund Manral" loading="lazy">
+      <span class="card-copy"><strong>Mukund Manral</strong><span class="highlight">Good food, beautiful nature & peace</span><span class="read-more">Read review ↗</span></span>
+    </button>
+</div></section>
   <div class="back"><a href="index.html">← Back to Manral’s View</a></div>
 </main>
+<dialog id="reviewDialog" aria-labelledby="dialogTitle">
+  <div class="modal-head"><span class="modal-kicker">Guest review</span><button class="close" type="button" aria-label="Close review">×</button><h2 id="dialogTitle"></h2></div>
+  <div class="modal-body"><div id="dialogReview"></div><div class="modal-name" id="dialogName"></div></div>
+</dialog>
+<script>
+const reviews = [{"file": "ravi-sharma.jpg", "name": "Ravi Sharma", "highlight": "A different feeling in the mountains", "review": "Coming from Haryana, I've always been fascinated by mountains. I've travelled to Himachal Pradesh quite a few times, but visiting Uttarakhand gave me a completely different feeling. There is something special about these mountains — the peaceful surroundings, the beautiful landscapes, the warmth of the people, and the richness of the local culture. What makes the experience memorable is not just the scenery, but the hospitality and the simplicity of life here. It's a place that makes you slow down, connect with nature, and appreciate the little things. Uttarakhand has definitely found a special place in my heart."}, {"file": "monica-malkotia.jpg", "name": "Monica Malkotia", "highlight": "Views, nature & warm hospitality", "review": "What a beautiful experience! The stunning mountain views, peaceful surroundings, and refreshing atmosphere made this stay truly special. Waking up surrounded by nature and enjoying the beauty of Uttarakhand was an absolute delight. What made it even better was the warm hospitality and welcoming environment. It felt less like visiting a destination and more like being at home in the mountains. A wonderful place for anyone looking to escape the city's hustle and reconnect with nature."}, {"file": "malvika-thakur.jpg", "name": "Malvika Thakur", "highlight": "A haven in the hills", "review": "Nestled amidst Uttarakhand’s resplendent hills, this enchanting retreat offered us a sublime confluence of breathtaking vistas, profound tranquillity, and nature’s unadulterated splendour. The host’s gracious warmth rendered the experience all the more delightful, making it a haven one departs from with a grateful heart and an earnest yearning to return."}, {"file": "tracy-mozhui.jpg", "name": "Tracy Mozhui", "highlight": "A refreshing escape", "review": "Had a wonderful time at this beautiful retreat in Uttarakhand. The peaceful surroundings, fresh mountain air, and stunning views made the whole experience so refreshing. It's the perfect place to escape busy city life and reconnect with nature. Everything about the atmosphere felt lovely and relaxing, making it a memorable getaway. Would definitely love to visit again!"}, {"file": "shubham-dimri.jpg", "name": "Shubham Dimri", "highlight": "A place to slow down", "review": "I recently had the chance to visit this beautiful retreat in Uttarakhand, and I must say, it was such a lovely experience. Surrounded by nature and away from the noise and chaos of city life, the place has a peaceful and refreshing atmosphere. The beautiful surroundings, fresh mountain air, and calm environment make it a perfect getaway for anyone looking to relax and unwind.\n\nWhat I loved most was how peaceful and homely the place felt. It's one of those places where you can simply sit back, enjoy nature, and forget about your busy routine for a while.\n\nIf you're someone who loves nature, mountains, and a little peace and quiet, I would definitely recommend visiting this retreat. It's a beautiful place to slow down and enjoy the simple things in life. Would love to visit again!"}, {"file": "mukund-manral.jpg", "name": "Mukund Manral", "highlight": "Good food, beautiful nature & peace", "review": "A wonderful place to spend time away from the busy city and enjoy the beauty of the mountains. The food, peaceful surroundings, fresh air, and beautiful natural landscape make the experience special. I especially enjoyed the greenery, the local environment, and the opportunity to appreciate nature up close. It's a lovely place to relax, recharge, and enjoy the simple pleasures of life. Definitely worth experiencing for anyone who loves the mountains and the outdoors."}];
+const dialog = document.getElementById('reviewDialog');
+const title = document.getElementById('dialogTitle');
+const reviewText = document.getElementById('dialogReview');
+const nameText = document.getElementById('dialogName');
+document.querySelectorAll('.guest-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const guest = reviews.find(item => item.name === card.dataset.guest);
+    if (!guest) return;
+    title.textContent = guest.highlight;
+    reviewText.textContent = guest.review;
+    nameText.textContent = '— ' + guest.name;
+    dialog.showModal();
+  });
+});
+document.querySelector('.close').addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', event => {
+  if (event.target === dialog) dialog.close();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && dialog.open) dialog.close();
+});
+</script>
 </body>
 </html>
