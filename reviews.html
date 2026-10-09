@@ -8,59 +8,36 @@
 <style>
 :root{--forest:#203b30;--cream:#f7f4ec;--sage:#e3e9df}
 *{box-sizing:border-box}
-html{background:var(--cream)}
+html{background:var(--cream);min-height:100%}
 body{margin:0;background:var(--cream);color:var(--forest);font-family:Arial,Helvetica,sans-serif}
-header{padding:22px 5%;display:flex;justify-content:center;background:#fffdf8}
+header{padding:22px 5%;display:flex;justify-content:center;background:#fffdf8;border-bottom:1px solid #203b3012}
 .brand{font:700 1.45rem Georgia,serif;color:var(--forest);text-decoration:none}
-.intro{text-align:center;padding:26px 16px 28px;background:linear-gradient(135deg,var(--sage),var(--cream))}
+.intro{text-align:center;padding:34px 16px 30px;background:linear-gradient(135deg,var(--sage),var(--cream))}
 .intro p{font:italic clamp(1.2rem,3vw,1.9rem)/1.35 Georgia,serif;margin:0 auto;max-width:720px}
-.marquee-wrap{overflow:hidden;padding:12px 0 26px}
-.track{display:flex;width:max-content;gap:16px;padding-left:16px;animation:flow 68s linear infinite;will-change:transform}
-.track.reverse{animation-direction:reverse;animation-duration:76s}
-.marquee-wrap:hover .track,.marquee-wrap:focus-within .track{animation-play-state:paused}
-.photo{position:relative;display:block;flex:0 0 auto;width:clamp(230px,31vw,370px);height:clamp(260px,34vw,390px);overflow:hidden;border-radius:18px;background:#dfe5dc;box-shadow:0 10px 28px #20352d18}
-.photo img{display:block;width:100%;height:100%;object-fit:cover}
-.name{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 16px;color:white;font-weight:700;font-size:1rem;letter-spacing:.02em;background:linear-gradient(transparent,#101b16d9);text-shadow:0 1px 4px #0008}
-@keyframes flow{to{transform:translateX(-50%)}}
-@media(max-width:600px){.track{gap:12px}.photo{width:76vw;height:78vw;max-height:350px}.marquee-wrap{padding-bottom:18px}}
-@media(prefers-reduced-motion:reduce){.track{animation:none}.marquee-wrap{overflow-x:auto}}
+main{max-width:1320px;margin:0 auto;padding:28px 22px 54px}
+.guest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.guest-card{position:relative;min-width:0;height:clamp(280px,32vw,430px);overflow:hidden;border-radius:18px;background:#dfe5dc;box-shadow:0 10px 28px #20352d18}
+.guest-card img{display:block;width:100%;height:100%;object-fit:cover}
+.guest-name{position:absolute;left:0;right:0;bottom:0;padding:48px 18px 18px;color:white;font-weight:700;font-size:1.05rem;letter-spacing:.02em;background:linear-gradient(transparent,#101b16e8);text-shadow:0 1px 4px #0008}
+.back{text-align:center;margin:32px 0 0}
+.back a{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--forest);color:white;text-decoration:none;font-weight:700}
+@media(max-width:850px){.guest-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.guest-card{height:clamp(280px,55vw,400px)}}
+@media(max-width:520px){main{padding:20px 14px 36px}.guest-grid{grid-template-columns:1fr;gap:16px}.guest-card{height:105vw;max-height:440px;min-height:300px}}
 </style>
 </head>
 <body>
 <header><a class="brand" href="index.html">Manral’s View</a></header>
 <section class="intro"><p>A few moments, a lot of mountain memories.</p></section>
 <main aria-label="Guest memories from Machhor">
-  <div class="marquee-wrap">
-    <div class="track" id="row1"></div>
-    <div class="track reverse" id="row2"></div>
+  <div class="guest-grid">
+    <article class="guest-card"><img src="shubham-dimri.jpg" alt="Shubham Dimri enjoying the mountain view" loading="lazy"><span class="guest-name">Shubham Dimri</span></article>
+    <article class="guest-card"><img src="malvika-thakur.jpg" alt="Malvika Thakur during her visit" loading="lazy"><span class="guest-name">Malvika Thakur</span></article>
+    <article class="guest-card"><img src="monica-malkotia.jpg" alt="Monica Malkotia during her visit" loading="lazy"><span class="guest-name">Monica Malkotia</span></article>
+    <article class="guest-card"><img src="mukund-manral.jpg" alt="Mukund Manral at a waterfall" loading="lazy"><span class="guest-name">Mukund Manral</span></article>
+    <article class="guest-card"><img src="ravi-sharma.jpg" alt="Ravi Sharma" loading="lazy"><span class="guest-name">Ravi Sharma</span></article>
+    <article class="guest-card"><img src="tracy-mozhui.jpg" alt="Tracy Mozhui enjoying the misty hills" loading="lazy"><span class="guest-name">Tracy Mozhui</span></article>
   </div>
+  <div class="back"><a href="index.html">← Back to Manral’s View</a></div>
 </main>
-<script>
-const guests = [
-  {file:"shubham-dimri.jpg", name:"Shubham Dimri"},
-  {file:"malvika-thakur.jpg", name:"Malvika Thakur"},
-  {file:"monica-malkotia.jpg", name:"Monica Malkotia"},
-  {file:"mukund-manral.jpg", name:"Mukund Manral"},
-  {file:"ravi-sharma.jpg", name:"Ravi Sharma"},
-  {file:"tracy-mozhui.jpg", name:"Tracy Mozhui"}
-];
-function addFlow(row, list) {
-  [...list, ...list].forEach((guest, index) => {
-    const card = document.createElement("div");
-    card.className = "photo";
-    const img = document.createElement("img");
-    img.src = guest.file;
-    img.alt = guest.name;
-    img.loading = index < list.length ? "eager" : "lazy";
-    const name = document.createElement("span");
-    name.className = "name";
-    name.textContent = guest.name;
-    card.append(img, name);
-    row.appendChild(card);
-  });
-}
-addFlow(document.getElementById("row1"), guests.slice(0, 3));
-addFlow(document.getElementById("row2"), guests.slice(3));
-</script>
 </body>
 </html>
