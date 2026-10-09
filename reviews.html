@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guest memories from Manral’s View in Machhor, Uttarakhand.">
+<title>Guest Memories | Manral’s View</title>
+<style>
+:root{--forest:#203b30;--cream:#f7f4ec;--sage:#e3e9df}
+*{box-sizing:border-box}
+html{background:var(--cream)}
+body{margin:0;background:var(--cream);color:var(--forest);font-family:Arial,Helvetica,sans-serif}
+header{padding:22px 5%;display:flex;justify-content:center;background:#fffdf8}
+.brand{font:700 1.45rem Georgia,serif;color:var(--forest);text-decoration:none}
+.intro{text-align:center;padding:26px 16px 28px;background:linear-gradient(135deg,var(--sage),var(--cream))}
+.intro p{font:italic clamp(1.2rem,3vw,1.9rem)/1.35 Georgia,serif;margin:0 auto;max-width:720px}
+.marquee-wrap{overflow:hidden;padding:12px 0 26px}
+.track{display:flex;width:max-content;gap:16px;padding-left:16px;animation:flow 68s linear infinite;will-change:transform}
+.track.reverse{animation-direction:reverse;animation-duration:76s}
+.marquee-wrap:hover .track,.marquee-wrap:focus-within .track{animation-play-state:paused}
+.photo{position:relative;display:block;flex:0 0 auto;width:clamp(230px,31vw,370px);height:clamp(260px,34vw,390px);overflow:hidden;border-radius:18px;background:#dfe5dc;box-shadow:0 10px 28px #20352d18}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.name{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 16px;color:white;font-weight:700;font-size:1rem;letter-spacing:.02em;background:linear-gradient(transparent,#101b16d9);text-shadow:0 1px 4px #0008}
+@keyframes flow{to{transform:translateX(-50%)}}
+@media(max-width:600px){.track{gap:12px}.photo{width:76vw;height:78vw;max-height:350px}.marquee-wrap{padding-bottom:18px}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.marquee-wrap{overflow-x:auto}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="index.html">Manral’s View</a></header>
+<section class="intro"><p>A few moments, a lot of mountain memories.</p></section>
+<main aria-label="Guest memories from Machhor">
+  <div class="marquee-wrap">
+    <div class="track" id="row1"></div>
+    <div class="track reverse" id="row2"></div>
+  </div>
+</main>
+<script>
+const guests = [
+  {file:"shubham-dimri.jpg", name:"Shubham Dimri"},
+  {file:"malvika-thakur.jpg", name:"Malvika Thakur"},
+  {file:"monica-malkotia.jpg", name:"Monica Malkotia"},
+  {file:"mukund-manral.jpg", name:"Mukund Manral"},
+  {file:"ravi-sharma.jpg", name:"Ravi Sharma"},
+  {file:"tracy-mozhui.jpg", name:"Tracy Mozhui"}
+];
+function addFlow(row, list) {
+  [...list, ...list].forEach((guest, index) => {
+    const card = document.createElement("div");
+    card.className = "photo";
+    const img = document.createElement("img");
+    img.src = guest.file;
+    img.alt = guest.name;
+    img.loading = index < list.length ? "eager" : "lazy";
+    const name = document.createElement("span");
+    name.className = "name";
+    name.textContent = guest.name;
+    card.append(img, name);
+    row.appendChild(card);
+  });
+}
+addFlow(document.getElementById("row1"), guests.slice(0, 3));
+addFlow(document.getElementById("row2"), guests.slice(3));
+</script>
+</body>
+</html>
