@@ -3,117 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guest reviews and memories from Manral’s View in Uttarakhand.">
+<title>Guest Reviews | Manral’s View</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-<meta name="description" content="Real guest reviews and memories from Manral’s View in Uttarakhand.">
-<title>Guest Reviews | Manral’s View</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--forest:#0f3d2e;--cream:#f7f4ec;--sage:#e3e9df;--ink:#20352d}
+:root{--forest:#103e30;--cream:#f7f4ec;--sage:#e6ebe1;--ink:#263c32;--muted:#64766b;--line:#dce2d7}
 *{box-sizing:border-box}
 html{background:var(--cream);scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--forest);font-family:"DM Sans",Arial,Helvetica,sans-serif}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,Helvetica,sans-serif}
 header{padding:20px 5%;display:flex;justify-content:center;background:#fffdf8;border-bottom:1px solid #203b3012}
-.brand{font:700 1.4rem "Playfair Display",Georgia,serif;color:var(--forest);text-decoration:none}
-.intro{text-align:center;padding:30px 16px 24px;background:linear-gradient(135deg,var(--sage),var(--cream))}
-.eyebrow{font-size:.72rem;letter-spacing:.18em;font-weight:700;text-transform:uppercase;margin:0 0 10px;color:#6b7d6d}
-h1{font:500 clamp(2rem,4vw,3.1rem)/1.1 "Playfair Display",Georgia,serif;margin:0 0 10px}
-.intro p:last-child{margin:0 auto;max-width:650px;line-height:1.6;color:#53665a}
-main{padding:12px 14px 40px;overflow:hidden}
-.hint{text-align:center;color:#64766b;font-size:.82rem;margin:0 0 8px}
-.orbit-stage{height:530px;max-width:1120px;margin:0 auto;position:relative;display:grid;place-items:center;isolation:isolate}
-.orbit-stage:before{content:"";position:absolute;width:min(72vw,700px);height:min(72vw,390px);border:1px solid #aab9a7;border-radius:50%;opacity:.48}
-.orbit{position:absolute;width:1px;height:1px;animation:orbit-spin 42s linear infinite}
-.orbit-card{position:absolute;left:0;top:0;width:190px;height:230px;transform:rotate(calc(var(--i)*60deg)) translateY(-185px) rotate(calc(var(--i)*-60deg))}
-.guest-card{display:block;padding:0;border:0;border-radius:16px;overflow:hidden;text-align:left;cursor:pointer;background:#dfe5dc;box-shadow:0 8px 22px #20352d22;color:white}
-.guest-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
-.guest-card:hover img,.guest-card:focus-visible img{transform:scale(1.045)}
-.guest-card:focus-visible{outline:3px solid #b17a45;outline-offset:3px}
-.card-copy{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:7px;padding:38px 13px 14px;background:linear-gradient(transparent,#101b16ee)}
-.card-copy strong{font-size:.94rem}
-.highlight{font-size:.8rem;line-height:1.4;color:#fff}
-.read-more{font-size:.72rem;font-weight:700;letter-spacing:.02em;color:#e4f0e0;margin-top:2px}
-@keyframes orbit-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.orbit-stage:hover .orbit,.orbit-stage:focus-within .orbit{animation-play-state:paused}
-.back{text-align:center;margin:14px 0 0}
-.back a{display:inline-block;padding:11px 18px;border-radius:999px;background:var(--forest);color:white;text-decoration:none;font-size:.9rem;font-weight:700}
-dialog{width:min(620px,calc(100% - 28px));max-height:min(82vh,800px);padding:0;border:0;border-radius:20px;background:var(--cream);color:var(--ink);box-shadow:0 24px 90px #0005;overflow:auto}
-dialog::backdrop{background:#102219b8;backdrop-filter:blur(4px)}
-.modal-head{position:relative;padding:25px 26px 20px;background:linear-gradient(135deg,var(--sage),var(--cream));border-bottom:1px solid #203b3015}
-.modal-kicker{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#637a69;font-weight:700}
-.modal-head h2{font:500 clamp(1.55rem,4vw,2.1rem)/1.2 "Playfair Display",Georgia,serif;margin:9px 40px 0 0}
-.close{position:absolute;right:16px;top:15px;width:38px;height:38px;border:0;border-radius:50%;background:#fffdf8;color:var(--forest);font-size:1.5rem;cursor:pointer}
-.modal-body{padding:24px 26px 28px;font:400 1rem/1.75 "DM Sans",Arial,Helvetica,sans-serif;white-space:pre-line}
-.modal-name{font:700 .85rem/1.4 "DM Sans",Arial,Helvetica,sans-serif;color:#617568;margin-top:18px}
-@media(max-width:650px){.orbit-stage{height:610px;transform:scale(.8);margin:-30px -35px}.orbit-stage:before{width:320px;height:320px}.orbit-card{width:155px;height:195px;transform:rotate(calc(var(--i)*60deg)) translateY(-150px) rotate(calc(var(--i)*-60deg))}.modal-head{padding:22px 20px 18px}.modal-body{padding:20px;font-size:.98rem}}
-@media(prefers-reduced-motion:reduce){.orbit{animation:none}.orbit-stage{height:auto;display:flex;flex-wrap:wrap;gap:12px;padding:20px 0}.orbit-stage:before{display:none}.orbit{position:static;width:auto;height:auto;display:contents}.orbit-card{position:static;transform:none!important}.guest-card{position:relative;inset:auto;width:calc(50vw - 24px);height:220px}}
+.brand{font:600 1.35rem "Playfair Display",Georgia,serif;color:var(--forest);text-decoration:none}
+main{max-width:1100px;margin:0 auto;padding:34px 24px 52px}
+.review-row{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center;padding:30px 0;border-bottom:1px solid var(--line)}
+.review-row:first-child{padding-top:8px}
+.guest-profile{width:100%;max-width:300px}
+.guest-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:15px;background:#e0e5dc;box-shadow:0 10px 28px #20352d12}
+.guest-name{font:700 1.25rem/1.3 "DM Sans",Arial,sans-serif;color:var(--forest);margin:15px 2px 0}
+.review-content{padding:10px 0}
+.review-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 13px}
+.review-text{font:400 clamp(1.02rem,1.5vw,1.17rem)/1.85 "DM Sans",Arial,sans-serif;color:#35493e;margin:0}
+.review-title{font:600 1rem "DM Sans",Arial,sans-serif;color:var(--forest);margin:15px 0 0}
+@media(max-width:680px){main{padding:20px 18px 38px}.review-row{grid-template-columns:1fr;gap:18px;padding:26px 0}.guest-profile{max-width:100%;display:grid;grid-template-columns:100px 1fr;align-items:center;gap:16px}.guest-photo{width:100px;height:120px;aspect-ratio:auto;border-radius:12px}.guest-name{margin:0;font-size:1.15rem}.review-content{padding:0}.review-text{font-size:1rem}}
 </style>
 </head>
 <body>
 <header><a class="brand" href="index.html">Manral’s View</a></header>
-<section class="intro">
-  <p class="eyebrow">Real moments, real memories</p>
-  <h1>Stories from our guests</h1>
-  <p>Every visit leaves a different memory. Tap a guest’s highlight to read what made their time in Uttarakhand special.</p>
-</section>
 <main aria-label="Guest reviews">
-<p class="hint">Six guests · one circular orbit · select a card to read the full review</p>
-<section class="orbit-stage" aria-label="Six unique guest reviews moving in a circular orbit">
-<div class="orbit">
-<button class="guest-card orbit-card" style="--i:0" type="button" data-guest="Ravi Sharma" aria-label="Read Ravi Sharma's review">
-      <img src="ravi-sharma.jpg" alt="Ravi Sharma" loading="lazy">
-      <span class="card-copy"><strong>Ravi Sharma</strong><span class="highlight">A different feeling in the mountains</span><span class="read-more">Read review ↗</span></span>
-    </button>
-<button class="guest-card orbit-card" style="--i:1" type="button" data-guest="Monica Malkotia" aria-label="Read Monica Malkotia's review">
-      <img src="monica-malkotia.jpg" alt="Monica Malkotia" loading="lazy">
-      <span class="card-copy"><strong>Monica Malkotia</strong><span class="highlight">Views, nature & warm hospitality</span><span class="read-more">Read review ↗</span></span>
-    </button>
-<button class="guest-card orbit-card" style="--i:2" type="button" data-guest="Malvika Thakur" aria-label="Read Malvika Thakur's review">
-      <img src="malvika-thakur.jpg" alt="Malvika Thakur" loading="lazy">
-      <span class="card-copy"><strong>Malvika Thakur</strong><span class="highlight">A haven in the hills</span><span class="read-more">Read review ↗</span></span>
-    </button>
-<button class="guest-card orbit-card" style="--i:3" type="button" data-guest="Tracy Mozhui" aria-label="Read Tracy Mozhui's review">
-      <img src="tracy-mozhui.jpg" alt="Tracy Mozhui" loading="lazy">
-      <span class="card-copy"><strong>Tracy Mozhui</strong><span class="highlight">A refreshing escape</span><span class="read-more">Read review ↗</span></span>
-    </button>
-<button class="guest-card orbit-card" style="--i:4" type="button" data-guest="Shubham Dimri" aria-label="Read Shubham Dimri's review">
-      <img src="shubham-dimri.jpg" alt="Shubham Dimri" loading="lazy">
-      <span class="card-copy"><strong>Shubham Dimri</strong><span class="highlight">A place to slow down</span><span class="read-more">Read review ↗</span></span>
-    </button>
-<button class="guest-card orbit-card" style="--i:5" type="button" data-guest="Mukund Manral" aria-label="Read Mukund Manral's review">
-      <img src="mukund-manral.jpg" alt="Mukund Manral" loading="lazy">
-      <span class="card-copy"><strong>Mukund Manral</strong><span class="highlight">Good food, beautiful nature & peace</span><span class="read-more">Read review ↗</span></span>
-    </button>
-</div></section>
-<p class="back"><a href="index.html">Back to Manral’s View</a></p>
+<article class="review-row" id="review-ravi-sharma">
+  <div class="guest-profile">
+    <img class="guest-photo" src="ravi-sharma.jpg" alt="Ravi Sharma" loading="lazy">
+    <h2 class="guest-name">Ravi Sharma</h2>
+  </div>
+  <div class="review-content">
+    <p class="review-label">Guest review</p>
+    <blockquote class="review-text">Coming from Haryana, I've always been fascinated by mountains. I've travelled to Himachal Pradesh quite a few times, but visiting Uttarakhand gave me a completely different feeling. There is something special about these mountains — the peaceful surroundings, the beautiful landscapes, the warmth of the people, and the richness of the local culture. What makes the experience memorable is not just the scenery, but the hospitality and the simplicity of life here. It's a place that makes you slow down, connect with nature, and appreciate the little things. Uttarakhand has definitely found a special place in my heart.</blockquote>
+    <p class="review-title">A different feeling in the mountains</p>
+  </div>
+</article>
+<article class="review-row" id="review-monica-malkotia">
+  <div class="guest-profile">
+    <img class="guest-photo" src="monica-malkotia.jpg" alt="Monica Malkotia" loading="lazy">
+    <h2 class="guest-name">Monica Malkotia</h2>
+  </div>
+  <div class="review-content">
+    <p class="review-label">Guest review</p>
+    <blockquote class="review-text">What a beautiful experience! The stunning mountain views, peaceful surroundings, and refreshing atmosphere made this stay truly special. Waking up surrounded by nature and enjoying the beauty of Uttarakhand was an absolute delight. What made it even better was the warm hospitality and welcoming environment. It felt less like visiting a destination and more like being at home in the mountains. A wonderful place for anyone looking to escape the city's hustle and reconnect with nature.</blockquote>
+    <p class="review-title">Views, nature &amp; warm hospitality</p>
+  </div>
+</article>
+<article class="review-row" id="review-malvika-thakur">
+  <div class="guest-profile">
+    <img class="guest-photo" src="malvika-thakur.jpg" alt="Malvika Thakur" loading="lazy">
+    <h2 class="guest-name">Malvika Thakur</h2>
+  </div>
+  <div class="review-content">
+    <p class="review-label">Guest review</p>
+    <blockquote class="review-text">Nestled amidst Uttarakhand’s resplendent hills, this enchanting retreat offered us a sublime confluence of breathtaking vistas, profound tranquillity, and nature’s unadulterated splendour. The host’s gracious warmth rendered the experience all the more delightful, making it a haven one departs from with a grateful heart and an earnest yearning to return.</blockquote>
+    <p class="review-title">A haven in the hills</p>
+  </div>
+</article>
+<article class="review-row" id="review-tracy-mozhui">
+  <div class="guest-profile">
+    <img class="guest-photo" src="tracy-mozhui.jpg" alt="Tracy Mozhui" loading="lazy">
+    <h2 class="guest-name">Tracy Mozhui</h2>
+  </div>
+  <div class="review-content">
+    <p class="review-label">Guest review</p>
+    <blockquote class="review-text">Had a wonderful time at this beautiful retreat in Uttarakhand. The peaceful surroundings, fresh mountain air, and stunning views made the whole experience so refreshing. It's the perfect place to escape busy city life and reconnect with nature. Everything about the atmosphere felt lovely and relaxing, making it a memorable getaway. Would definitely love to visit again!</blockquote>
+    <p class="review-title">A refreshing escape</p>
+  </div>
+</article>
+<article class="review-row" id="review-shubham-dimri">
+  <div class="guest-profile">
+    <img class="guest-photo" src="shubham-dimri.jpg" alt="Shubham Dimri" loading="lazy">
+    <h2 class="guest-name">Shubham Dimri</h2>
+  </div>
+  <div class="review-content">
+    <p class="review-label">Guest review</p>
+    <blockquote class="review-text">I recently had the chance to visit this beautiful retreat in Uttarakhand, and I must say, it was such a lovely experience. Surrounded by nature and away from the noise and chaos of city life, the place has a peaceful and refreshing atmosphere. The beautiful surroundings, fresh mountain air, and calm environment make it a perfect getaway for anyone looking to relax and unwind.
+
+What I loved most was how peaceful and homely the place felt. It's one of those places where you can simply sit back, enjoy nature, and forget about your busy routine for a while.
+
+If you're someone who loves nature, mountains, and a little peace and quiet, I would definitely recommend visiting this retreat. It's a beautiful place to slow down and enjoy the simple things in life. Would love to visit again!</blockquote>
+    <p class="review-title">A place to slow down</p>
+  </div>
+</article>
+<article class="review-row" id="review-mukund-manral">
+  <div class="guest-profile">
+    <img class="guest-photo" src="mukund-manral.jpg" alt="Mukund Manral" loading="lazy">
+    <h2 class="guest-name">Mukund Manral</h2>
+  </div>
+  <div class="review-content">
+    <p class="review-label">Guest review</p>
+    <blockquote class="review-text">A wonderful place to spend time away from the busy city and enjoy the beauty of the mountains. The food, peaceful surroundings, fresh air, and beautiful natural landscape make the experience special. I especially enjoyed the greenery, the local environment, and the opportunity to appreciate nature up close. It's a lovely place to relax, recharge, and enjoy the simple pleasures of life. Definitely worth experiencing for anyone who loves the mountains and the outdoors.</blockquote>
+    <p class="review-title">Good food, beautiful nature &amp; peace</p>
+  </div>
+</article>
 </main>
-<dialog id="reviewDialog" aria-labelledby="dialogTitle">
-  <div class="modal-head"><span class="modal-kicker">Guest review</span><button class="close" type="button" aria-label="Close review">×</button><h2 id="dialogTitle"></h2></div>
-  <div class="modal-body"><div id="dialogReview"></div><div class="modal-name" id="dialogName"></div></div>
-</dialog>
-<script>
-const reviews = [{"file": "ravi-sharma.jpg", "name": "Ravi Sharma", "highlight": "A different feeling in the mountains", "review": "Coming from Haryana, I've always been fascinated by mountains. I've travelled to Himachal Pradesh quite a few times, but visiting Uttarakhand gave me a completely different feeling. There is something special about these mountains — the peaceful surroundings, the beautiful landscapes, the warmth of the people, and the richness of the local culture. What makes the experience memorable is not just the scenery, but the hospitality and the simplicity of life here. It's a place that makes you slow down, connect with nature, and appreciate the little things. Uttarakhand has definitely found a special place in my heart."}, {"file": "monica-malkotia.jpg", "name": "Monica Malkotia", "highlight": "Views, nature & warm hospitality", "review": "What a beautiful experience! The stunning mountain views, peaceful surroundings, and refreshing atmosphere made this stay truly special. Waking up surrounded by nature and enjoying the beauty of Uttarakhand was an absolute delight. What made it even better was the warm hospitality and welcoming environment. It felt less like visiting a destination and more like being at home in the mountains. A wonderful place for anyone looking to escape the city's hustle and reconnect with nature."}, {"file": "malvika-thakur.jpg", "name": "Malvika Thakur", "highlight": "A haven in the hills", "review": "Nestled amidst Uttarakhand’s resplendent hills, this enchanting retreat offered us a sublime confluence of breathtaking vistas, profound tranquillity, and nature’s unadulterated splendour. The host’s gracious warmth rendered the experience all the more delightful, making it a haven one departs from with a grateful heart and an earnest yearning to return."}, {"file": "tracy-mozhui.jpg", "name": "Tracy Mozhui", "highlight": "A refreshing escape", "review": "Had a wonderful time at this beautiful retreat in Uttarakhand. The peaceful surroundings, fresh mountain air, and stunning views made the whole experience so refreshing. It's the perfect place to escape busy city life and reconnect with nature. Everything about the atmosphere felt lovely and relaxing, making it a memorable getaway. Would definitely love to visit again!"}, {"file": "shubham-dimri.jpg", "name": "Shubham Dimri", "highlight": "A place to slow down", "review": "I recently had the chance to visit this beautiful retreat in Uttarakhand, and I must say, it was such a lovely experience. Surrounded by nature and away from the noise and chaos of city life, the place has a peaceful and refreshing atmosphere. The beautiful surroundings, fresh mountain air, and calm environment make it a perfect getaway for anyone looking to relax and unwind.\n\nWhat I loved most was how peaceful and homely the place felt. It's one of those places where you can simply sit back, enjoy nature, and forget about your busy routine for a while.\n\nIf you're someone who loves nature, mountains, and a little peace and quiet, I would definitely recommend visiting this retreat. It's a beautiful place to slow down and enjoy the simple things in life. Would love to visit again!"}, {"file": "mukund-manral.jpg", "name": "Mukund Manral", "highlight": "Good food, beautiful nature & peace", "review": "A wonderful place to spend time away from the busy city and enjoy the beauty of the mountains. The food, peaceful surroundings, fresh air, and beautiful natural landscape make the experience special. I especially enjoyed the greenery, the local environment, and the opportunity to appreciate nature up close. It's a lovely place to relax, recharge, and enjoy the simple pleasures of life. Definitely worth experiencing for anyone who loves the mountains and the outdoors."}];
-const dialog = document.getElementById('reviewDialog');
-const title = document.getElementById('dialogTitle');
-const reviewText = document.getElementById('dialogReview');
-const nameText = document.getElementById('dialogName');
-document.querySelectorAll('.guest-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const guest = reviews.find(item => item.name === card.dataset.guest);
-    if (!guest) return;
-    title.textContent = guest.highlight;
-    reviewText.textContent = guest.review;
-    nameText.textContent = '— ' + guest.name;
-    dialog.showModal();
-  });
-});
-document.querySelector('.close').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => {
-  if (event.target === dialog) dialog.close();
-});
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && dialog.open) dialog.close();
-});
-</script>
 </body>
 </html>
